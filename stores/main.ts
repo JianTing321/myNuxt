@@ -6,6 +6,7 @@ export const useMainStore = defineStore('main', {
 	state: () => ({
 		counter: 0,
 		name: 'Eduardo',
+		car: 'BMW',
 	}),
 	// optional getters
 	getters: {

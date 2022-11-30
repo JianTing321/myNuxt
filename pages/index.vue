@@ -1,24 +1,11 @@
 <template>
-  <div>
-<button>{{counter}}</button>
-  </div>
+	<div>
+	<div><nuxt-link to="/pinia">pinia</nuxt-link></div>
+	<div><nuxt-link to="/taiwind">taiwind</nuxt-link></div>	
+	<div><nuxt-link to="/_tailwind/">taiwind模板</nuxt-link></div>
+	</div>
 </template>
+
 <script lang="ts">
 
-import { useMainStore } from '../stores/main'
-import { storeToRefs } from 'pinia'
-export default defineComponent({
-  setup() {
-    const main = useMainStore()
-    // extract specific store properties
-    const { counter, doubleCounter } = storeToRefs(main)
-    return {
-      // gives access to the whole store in the template
-      main,
-      // gives access only to specific state or getter
-      counter,
-      doubleCounter,
-    }
-  },
-})
 </script>
