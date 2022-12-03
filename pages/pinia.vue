@@ -8,9 +8,8 @@
 </template>
 
 <script lang="ts">
-import { useMainStore } from '../stores/main'
-import { storeToRefs } from 'pinia'
-
+// import { useMainStore } from '../stores/main'
+// import { storeToRefs } from 'pinia'
 export default defineComponent({
 	setup() {
 		const main = useMainStore()
