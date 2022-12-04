@@ -1,5 +1,5 @@
 <template>
-	<div>
-		aaaasdasd
-	</div>
+  <div>
+    aaaasdasd
+  </div>
 </template>

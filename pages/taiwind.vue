@@ -1,6 +1,10 @@
 <template>
-  <div>				
-	<div><nuxt-link to="/">首頁</nuxt-link></div>
+  <div>
+    <div>
+      <nuxt-link to="/">
+        首頁
+      </nuxt-link>
+    </div>
     <div>
       <nav class="bg-orange-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +54,7 @@
                       stroke-linejoin="round"
                       stroke-width="2"
                       d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                    ></path>
+                    />
                   </svg>
                 </button>
 
@@ -58,11 +62,11 @@
                 <div class="ml-3 relative">
                   <div>
                     <button
-                      @click="toggle"
-                      class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid"
                       id="user-menu"
+                      class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid"
                       aria-label="User menu"
                       aria-haspopup="true"
+                      @click="toggle"
                     >
                       <img
                         class="h-8 w-8 rounded-full"
@@ -113,8 +117,8 @@
             <div class="-mr-2 flex md:hidden">
               <!-- Mobile menu button -->
               <button
-                @click="toggle"
                 class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
+                @click="toggle"
               >
                 <svg
                   :class="[isOpen ? 'hidden' : 'block', 'h-6 w-6']"
@@ -127,7 +131,7 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
+                  />
                 </svg>
                 <svg
                   :class="[isOpen ? 'block' : 'hidden', 'h-6 w-6']"
@@ -140,7 +144,7 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M6 18L18 6M6 6l12 12"
-                  ></path>
+                  />
                 </svg>
               </button>
             </div>
@@ -179,8 +183,12 @@
                 >
               </div>
               <div class="ml-3">
-                <div class="text-base font-medium leading-none text-white">Tom Cook</div>
-                <div class="mt-1 text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+                <div class="text-base font-medium leading-none text-white">
+                  Tom Cook
+                </div>
+                <div class="mt-1 text-sm font-medium leading-none text-gray-400">
+                  tom@example.com
+                </div>
               </div>
             </div>
             <div class="mt-3 px-2">
@@ -203,14 +211,16 @@
 
       <header class="bg-white shadow">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold leading-tight text-gray-900">Dashboard</h1>
+          <h1 class="text-3xl font-bold leading-tight text-gray-900">
+            Dashboard
+          </h1>
         </div>
       </header>
       <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <!-- Replace with your content -->
           <div class="px-4 py-6 sm:px-0">
-            <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+            <div class="border-4 border-dashed border-gray-200 rounded-lg h-96" />
           </div>
           <!-- /End replace -->
         </div>
@@ -221,7 +231,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       isOpen: false
     }
