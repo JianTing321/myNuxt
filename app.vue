@@ -3,6 +3,7 @@
     <p class="pb-4 text-2xl text-slate-600">
       這裡是最外層 app.vue
     </p>
+    <Header-Global />
     <NuxtLayout name="default">
       <template #header>
         <NuxtPage />
