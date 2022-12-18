@@ -1,5 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
+  // 將新創建的添加./ assets / css / main.css到文件中的
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
+  ssr: true,
   typescript: {
     typeCheck: true,
     strict: true
@@ -12,6 +22,7 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/tailwindcss'
     ]
+
   ],
   imports: {
     dirs: ['./stores']
