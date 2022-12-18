@@ -15,6 +15,11 @@
         taiwind模板
       </nuxt-link>
     </div>
+    <div>
+      <nuxt-link to="/product/">
+        product
+      </nuxt-link>
+    </div>
   </div>
 </template>
 

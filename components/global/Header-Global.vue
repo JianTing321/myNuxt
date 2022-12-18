@@ -3,10 +3,10 @@
     <div class="mx-auto">
       <div class="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
+          <nuxt-link to="/">
             <span class="sr-only">Your Company</span>
             <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
+          </nuxt-link>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
           <PopoverButton class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -53,7 +53,9 @@
             </transition>
           </Popover>
 
-          <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+          <nuxt-link to="/product/" class="text-base font-medium text-gray-500 hover:text-gray-900">
+            商品介紹
+          </nuxt-link>
           <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Docs</a>
 
           <Popover v-slot="{ open }" class="relative">
