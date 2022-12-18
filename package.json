@@ -9,10 +9,8 @@
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "autoprefixer": "^10.4.13",
     "eslint": "^8.29.0",
-    "nuxt": "3.0.0",
-    "postcss": "^8.4.20"
+    "nuxt": "3.0.0"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.5",
