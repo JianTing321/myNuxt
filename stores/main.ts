@@ -24,6 +24,7 @@ export const useMainStore = defineStore('main', {
       return state.car + otherStore.set
     }
   },
+
   // optional actions
   actions: {
     reset () {

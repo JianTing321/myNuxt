@@ -8,7 +8,6 @@
         <p class="mt-4 text-gray-500">
           The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated steel divider separates active cards from new ones, or can be used to archive important task lists.
         </p>
-
         <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
           <div v-for="feature in features" :key="feature.name" class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">
@@ -30,13 +29,35 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const features = [
-  { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-  { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-  { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-  { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
-  { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-  { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' }
-]
+<script lang="ts">
+
+export default defineComponent({
+  setup () {
+    const main = useMainStore()
+    // const test = useTestStore()
+    // extract specific store properties
+    const { counter, doubleCounter, name, car, otherGetter } = storeToRefs(main)
+    // const {...state } = storeToRefs(test)
+    const features = [
+      { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
+      { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
+      { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
+      { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
+      { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+      { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' }
+    ]
+    return {
+      // gives access to the whole store in the template
+      // ...state,
+      features,
+      otherGetter,
+      main,
+      // gives access only to specific state or getter
+      counter,
+      doubleCounter,
+      name,
+      car
+    }
+  }
+})
 </script>
