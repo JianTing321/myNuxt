@@ -42,3 +42,7 @@ npm run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 # JianTing321.github.io
+
+
+
+要在vsc中把自動格式化Editor.formatOnSave關掉(取消勾選)，在這個套件中(.eslintrce規則中)已經有套用格式化的方式避免遇到問題
