@@ -27,8 +27,9 @@
 
 <script lang="ts">
 // import { useMainStore } from '../stores/main'
-// import { storeToRefs } from 'pinia'
+import { storeToRefs } from 'pinia'
 export default defineComponent({
+  name: 'Pinia',
   setup () {
     const main = useMainStore()
     const Post = usePostsStore()

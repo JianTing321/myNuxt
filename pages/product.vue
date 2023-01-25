@@ -30,8 +30,9 @@
 </template>
 
 <script lang="ts">
-
+import { storeToRefs } from 'pinia'
 export default defineComponent({
+  name: 'Product',
   setup () {
     const main = useMainStore()
     // const test = useTestStore()

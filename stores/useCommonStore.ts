@@ -5,6 +5,7 @@ export type MakeInitStateFn<State> = (
     options?: Partial<State>
 ) => State;
 
+// 定義NewState可能為一物件或是函式
 type NewState<State> = Partial<State> | ((state: State) => Partial<State>);
 
 const useCommonStore = <State> (
