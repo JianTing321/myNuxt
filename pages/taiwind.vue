@@ -6,6 +6,9 @@
       </nuxt-link>
     </div>
     <div>
+      {{ counter }}
+    </div>
+    <div>
       <nav class="bg-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div class="flex items-center justify-between h-16">
@@ -232,14 +235,17 @@
 <script lang="ts">
 export default defineComponent({
   setup () {
+    const main = useMainStore()
+    const { counter } = storeToRefs(main)
     const isOpen = ref(false)
     const toggle = () => {
       isOpen.value = !isOpen.value
     }
     return {
       isOpen,
-      toggle
-
+      toggle,
+      main,
+      counter
     }
   }
 })

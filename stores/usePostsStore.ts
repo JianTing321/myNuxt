@@ -1,5 +1,6 @@
 export const usePostsStore = defineStore('posts', () => {
   const posts = ref([])
+
   function getPosts () {
     fetch('https://api.nuxtjs.dev/mountains')
       .then(response => response.json())
