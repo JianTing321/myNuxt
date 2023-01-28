@@ -36,7 +36,7 @@ export default defineComponent({
     const main = useMainStore()
     // const test = useTestStore()
     // extract specific store properties
-    const { counter, doubleCounter, name, car, otherGetter } = storeToRefs(main)
+    const { counter, doubleCounter, name, car } = storeToRefs(main)
     // const {...state } = storeToRefs(test)
     const features = [
       { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
@@ -50,7 +50,6 @@ export default defineComponent({
       // gives access to the whole store in the template
       // ...state,
       features,
-      otherGetter,
       main,
       // gives access only to specific state or getter
       counter,

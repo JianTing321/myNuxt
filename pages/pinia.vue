@@ -4,11 +4,11 @@
     <button @click="counter += 2">
       {{ counter }}
     </button>
-    <div>{{ car }}</div>
-    <div>{{ otherGetter }}</div>
-    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" @Click="main.getList">
-      測試功能test傳遞到maintest倉庫
+    <button @click="doubleCounter">
+      aaaas
     </button>
+    <div>{{ car }}</div>
+
     <br>
     <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" @Click="Post.getPosts">
       測試fetchApi
@@ -34,7 +34,7 @@ export default defineComponent({
     const Post = usePostsStore()
     // const test = useTestStore()
     // extract specific store properties
-    const { counter, doubleCounter, name, car, otherGetter } = storeToRefs(main)
+    const { counter, doubleCounter, name, car } = storeToRefs(main)
     // const {...state } = storeToRefs(test)
     const { posts, ...getPosts } = storeToRefs(Post)
     return {
@@ -43,7 +43,6 @@ export default defineComponent({
       ...getPosts,
       posts,
       Post,
-      otherGetter,
       main,
       // gives access only to specific state or getter
       counter,
