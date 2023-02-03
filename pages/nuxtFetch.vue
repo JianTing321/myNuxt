@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      {{ pending ? 'Loading' : count }}
+      {{ pending ? 'Loading' : count?.name }}
     </div>
     <nuxt-link to="/">
       首頁

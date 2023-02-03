@@ -13,6 +13,13 @@ function createRandomUser (): User {
     name: NAMES[idx],
     description: `Hi, I am ${NAMES[idx]}`
   }
+
+  // const idx = ~~(Math.random() * NAMES.length)
+  // return {
+  //   id: idx.toString(),
+  //   name: NAMES[idx],
+  //   description: `Hi, I am ${NAMES[idx]}`
+  // }
 }
 
 export default defineEventHandler(() => createRandomUser())
