@@ -46,6 +46,7 @@ export default defineComponent({
       { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
       { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' }
     ]
+
     return {
       // gives access to the whole store in the template
       // ...state,

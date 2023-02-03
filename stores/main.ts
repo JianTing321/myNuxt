@@ -3,6 +3,43 @@
 // and will appear in devtools
 // import { useTestStore } from './test'
 
+export const useMainStore = defineStore('main', () => {
+  // 我们不会直接暴露这个元素
+  const counter = ref<number>(0)
+  const name = ref('Eduardo')
+  const car = ref('BMW')
+
+  const doubleCounter = computed(() => counter.value++)
+  // const otherGetter = computed(() => car + testSet)
+
+  function clickCounter () {
+    return counter.value++
+  }
+  // 監視
+  watch(counter, (newValue:number, oldValue) => {
+    console.log('sum变化了', newValue, oldValue)
+    if (newValue === 10) {
+      alert('aaaa')
+    }
+  })
+  // composition api的監聽方式 要關閉監聽要再呼叫W
+  const Stop = watchEffect(() => {
+    console.log(counter.value)
+    if (counter.value === 15) {
+      counter.value = 1
+    }
+  })
+
+  return {
+    Stop,
+    counter,
+    name,
+    car,
+    doubleCounter,
+    clickCounter
+  }
+})
+
 // export const useMainStore = defineStore('main', {
 //   // a function that returns a fresh state
 //   state: () => ({
@@ -39,20 +76,3 @@
 //     }
 //   }
 // })
-
-export const useMainStore = defineStore('main', () => {
-  // 我们不会直接暴露这个元素
-  const counter = ref(0)
-  const name = ref('Eduardo')
-  const car = ref('BMW')
-
-  const doubleCounter = computed(() => counter.value++)
-  // const otherGetter = computed(() => car + testSet)
-
-  return {
-    counter,
-    name,
-    car,
-    doubleCounter
-  }
-})

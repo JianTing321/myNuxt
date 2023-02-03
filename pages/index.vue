@@ -20,6 +20,16 @@
         product
       </nuxt-link>
     </div>
+    <div>
+      <nuxt-link to="/nuxtFetch">
+        nuxtFetchApi
+      </nuxt-link>
+    </div>
+    <div>
+      <nuxt-link to="/composables">
+        composables
+      </nuxt-link>
+    </div>
   </div>
 </template>
 

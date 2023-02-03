@@ -8,7 +8,7 @@ export const usePostsStore = defineStore('posts', () => {
         // posts.value = data
         // alert(posts.value)
         console.log('Data is fetched.')
-        const dataName = []
+        const dataName = ([])
         for (const i of data) {
           dataName.push(i.title)
         }

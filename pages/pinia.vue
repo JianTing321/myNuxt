@@ -4,11 +4,19 @@
     <button @click="counter += 2">
       {{ counter }}
     </button>
-    <button @click="doubleCounter">
-      aaaas
+    <button @click="main.clickCounter()">
+      按我
+    </button>
+    <div>
+      {{ doubleCounter }}
+    </div>
+    <button @click="main.Stop">
+      停止監聽
     </button>
     <div>{{ car }}</div>
-
+    <button @click="Post.getPosts()">
+      啟用
+    </button>
     <br>
     <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" @Click="Post.getPosts">
       測試fetchApi
@@ -34,13 +42,13 @@ export default defineComponent({
     const Post = usePostsStore()
     // const test = useTestStore()
     // extract specific store properties
-    const { counter, doubleCounter, name, car } = storeToRefs(main)
+    const { counter, name, car, doubleCounter, ...clickCounter } = storeToRefs(main)
     // const {...state } = storeToRefs(test)
     const { posts, ...getPosts } = storeToRefs(Post)
     return {
       // gives access to the whole store in the template
       // ...state,
-      ...getPosts,
+      getPosts,
       posts,
       Post,
       main,
@@ -48,6 +56,7 @@ export default defineComponent({
       counter,
       doubleCounter,
       name,
+      clickCounter,
       car
     }
   }
