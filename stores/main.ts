@@ -3,6 +3,17 @@
 // and will appear in devtools
 // import { useTestStore } from './test'
 
+// interface main {
+//   counter:number
+//   name:string
+//   car:string
+// }
+// export interface GlobalConfig {
+//   username?: string | null;
+//   notificationList: string[];
+//   lang: 'zh' | 'jp' | 'en';
+// }
+
 export const useMainStore = defineStore('main', () => {
   // 我们不会直接暴露这个元素
   const counter = ref<number>(0)
