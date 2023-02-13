@@ -3,16 +3,16 @@
 // and will appear in devtools
 // import { useTestStore } from './test'
 
-// interface main {
-//   counter:number
-//   name:string
-//   car:string
-// }
-// export interface GlobalConfig {
-//   username?: string | null;
-//   notificationList: string[];
-//   lang: 'zh' | 'jp' | 'en';
-// }
+// const userInit = reactive({
+//   idNumber: '',
+//   userName: '',
+//   age: 0,
+//   sex: '',
+//   email: '',
+//   address: '',
+//   cellphone: 0,
+//   member: [{ status: false }, { grade: '訪客' }]
+// })
 
 export const useMainStore = defineStore('main', () => {
   // 我们不会直接暴露这个元素
@@ -20,12 +20,14 @@ export const useMainStore = defineStore('main', () => {
   const name = ref('Eduardo')
   const car = ref('BMW')
 
+  // getters
   const doubleCounter = computed(() => counter.value++)
   // const otherGetter = computed(() => car + testSet)
 
   function clickCounter () {
     return counter.value++
   }
+
   // 監視
   watch(counter, (newValue:number, oldValue) => {
     console.log('sum变化了', newValue, oldValue)

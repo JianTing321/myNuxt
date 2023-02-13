@@ -1,5 +1,10 @@
 <template>
   <div>
+    {{ user.idNumber }} +
+    {{ user.userName }}
+    <button @click="changeName('hi')">
+      變換使用者名稱
+    </button>
     <div>{{ name }}</div>
     <button @click="counter += 2">
       {{ counter }}
@@ -33,32 +38,59 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+// import { useMainStore } from '../stores/main'
+// import { storeToRefs } from 'pinia'
+
+const main = useMainStore()
+const Post = usePostsStore()
+const user = useUserStore()
+
+// const test = useTestStore()
+// extract specific store properties
+const { counter, name, car, doubleCounter } = storeToRefs(main)
+// const {...state } = storeToRefs(test)
+const { posts } = storeToRefs(Post)
+
+const changeName = (newValue:string) => {
+  user.userName = newValue
+}
+
+</script>
+
+<!-- <script lang="ts">
 // import { useMainStore } from '../stores/main'
 // import { storeToRefs } from 'pinia'
 export default defineComponent({
   setup () {
     const main = useMainStore()
     const Post = usePostsStore()
-    // const test = useTestStore()
-    // extract specific store properties
+    const user = useUserStore()
+
     const { counter, name, car, doubleCounter, ...clickCounter } = storeToRefs(main)
-    // const {...state } = storeToRefs(test)
     const { posts, ...getPosts } = storeToRefs(Post)
+
+    const { userName } = storeToRefs(user)
+
+    const changeName = (newValue:string) => {
+      user.userName = newValue
+    }
+
     return {
-      // gives access to the whole store in the template
-      // ...state,
       getPosts,
       posts,
       Post,
       main,
-      // gives access only to specific state or getter
+      user,
       counter,
       doubleCounter,
       name,
       clickCounter,
-      car
+      car,
+      userName,
+      changeName
+
     }
   }
 })
-</script>
+</script> -->

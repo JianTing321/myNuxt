@@ -8,6 +8,7 @@ const NAMES = ['David', 'Mark', 'Penguin', 'Allen']
 
 function createRandomUser (): User {
   const idx = ~~(Math.random() * NAMES.length)
+
   return {
     id: idx.toString(),
     name: NAMES[idx],

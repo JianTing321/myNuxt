@@ -3,10 +3,12 @@ export const usePostsStore = defineStore('posts', () => {
 
   function getPosts () {
     fetch('https://api.nuxtjs.dev/mountains')
+    // fetch('http://localhost:3000/api/userNew')
       .then(response => response.json())
       .then((data) => {
         // posts.value = data
         // alert(posts.value)
+        console.log(data)
         console.log('Data is fetched.')
         const dataName = ([])
         for (const i of data) {
@@ -17,6 +19,7 @@ export const usePostsStore = defineStore('posts', () => {
       })
       .catch((error) => {
         console.log(error)
+        // alert('沒抓到')
       })
   }
 
