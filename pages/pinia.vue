@@ -9,6 +9,7 @@
     <button @click="counter += 2">
       {{ counter }}
     </button>
+    <div>{{ main.counter }}</div>
     <button @click="main.clickCounter()">
       按我
     </button>

@@ -35,4 +35,5 @@ const createArticle = (i: number): SingleArticle => ({
   sns_cover_img_src: getItemByIdx(snsCoverImgSrcList, i)
 })
 
-export default defineEventHandler(e => createArticle(e.context.params.id))
+export default defineEventHandler(e => createArticle(e.context.number.id))
+// export default defineEventHandler(e => createArticle(e.context.params.id))

@@ -14,6 +14,9 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: true
   },
+  build: {
+    transpile: ['@heroicons/vue']
+  },
   // ssr: true,
   modules: [
     [
