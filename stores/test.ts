@@ -3,26 +3,6 @@ export const useTestStore = defineStore('test', () => {
   // 我们不会直接暴露这个元素
   const set = ref('測試的倉庫aaa')
   const testSet = ref<number>(2222)
-=======
-// import { defineStore } from 'pinia'
-// main is the name of the store. It is unique across your application
-// and will appear in devtools
-
-interface test {
-  set:string,
-  testSet:number
-}
-
-export const useTestStore = defineStore('test', {
-  // a function that returns a fresh state
-  state: ():test => ({
-    set: '測試的倉庫',
-    testSet: 222
-  }),
-  getters: {
-    doubleCount: state => state.testSet * 2
-  }
->>>>>>> d44ea8c75a31883e29eecd2b036e76ebe9f83809
 
   const doubleClickTest = computed(() => testSet.value * 2)
 
