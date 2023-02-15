@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 export const useTestStore = defineStore('test', () => {
   // 我们不会直接暴露这个元素
   const set = ref('測試的倉庫aaa')
