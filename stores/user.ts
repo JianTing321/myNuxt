@@ -13,7 +13,7 @@ export interface userConfig {
   }
 }
 
-export const useUserStore = defineStore('user', () => {
+export const useUserStore = defineStore('userStore', () => {
   const userState = reactive<userConfig>({
     userName: '訪客',
     idNumber: Math.random() * 10,

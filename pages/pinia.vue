@@ -1,7 +1,7 @@
 <template>
   <div>
-    {{ user.idNumber }} +
-    {{ user.userName }}
+    {{ userStore.idNumber }} +
+    {{ userStore.userName }}
     <button @click="changeName('hi')">
       變換使用者名稱
     </button>
@@ -41,11 +41,13 @@
 
 <script lang="ts" setup>
 // import { useMainStore } from '../stores/main'
-// import { storeToRefs } from 'pinia'
 
+// import user from '~~/server/api/user'
+
+// import { storeToRefs } from 'pinia'
 const main = useMainStore()
 const Post = usePostsStore()
-const user = useUserStore()
+const userStore = useUserStore()
 
 // const test = useTestStore()
 // extract specific store properties
@@ -54,7 +56,7 @@ const { counter, name, car, doubleCounter } = storeToRefs(main)
 const { posts } = storeToRefs(Post)
 
 const changeName = (newValue:string) => {
-  user.userName = newValue
+  userStore.userName = newValue
 }
 
 </script>

@@ -25,11 +25,6 @@
         taiwind
       </nuxt-link>
     </div>
-    <!-- <div>
-      <nuxt-link to="/_tailwind/">
-        taiwind模板
-      </nuxt-link>
-    </div> -->
     <div>
       <nuxt-link to="/product/">
         product
@@ -53,4 +48,5 @@ const messageList = [
   { id: '002', title: '消息002', name: 'aa' },
   { id: '003', title: '消息003', name: 'ccc' }
 ]
+
 </script>
